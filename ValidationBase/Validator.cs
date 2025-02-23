@@ -86,8 +86,8 @@ namespace C_BitirmeOdevi.ValidationBase
 
         public KeyValuePair<bool, string> SchematronControl(string xmlString)
         {
-            string xsltFilePath = "C:\\BitirmeÖdevi\\SchemaValidation\\packges\\schematron\\BasicSchematron.xslt";
-            string outputFilePath = "C:\\BitirmeÖdevi\\SchemaValidation\\packges\\schematron\\output.html";
+            string xsltFilePath = "C:\\C#BitirmeOdevi\\packges\\schematron\\BasicSchematron.xslt";
+            string outputFilePath = "C:\\C#BitirmeOdevi\\packges\\schematron\\output.html";
 
             // XSLT dönüşümünü başlat
             XslCompiledTransform xslt = new XslCompiledTransform();

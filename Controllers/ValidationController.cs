@@ -8,8 +8,8 @@ namespace C_BitirmeOdevi.Controllers
     [ApiController]
     public class ValidationController : ControllerBase
     {
-        [HttpPost("SchemaValidation")]
-        public IActionResult SchemaValidation(IFormFile file, DocumentType documentType, Validation validationType)
+        [HttpPost("ValidationControl")]
+        public IActionResult ValidationControl(IFormFile file, DocumentType documentType, Validation validationType)
         {
             string xmlString;
             KeyValuePair<bool, List<string>> schemaResponse = new KeyValuePair<bool, List<string>>();
