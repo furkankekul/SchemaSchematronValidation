@@ -10,16 +10,16 @@ namespace C_BitirmeOdevi.ValidationBase
             switch (documentType)
             {
                 case DocumentType.Invoice:
-                    filePath = "C:\\BitirmeÖdevi\\SchemaValidation\\packges\\xsdrt\\maindoc\\UBL-Invoice-2.1.xsd";
+                    filePath = Environment.GetEnvironmentVariable("invoiceXsdFilePath");
                     break;
                 case DocumentType.DespatchAdvice:
-                    filePath = @"C:\\BitirmeÖdevi\\SchemaValidation\\packges\\xsdrt\\maindoc\\UBL-DespatchAdvice-2.1.xsd";
+                    filePath = Environment.GetEnvironmentVariable("despatchXsdFilePath");
                     break;
                 case DocumentType.ApplicationResponse:
-                    filePath = @"C:\\BitirmeÖdevi\\SchemaValidation\\packges\\xsdrt\\maindoc\\UBL-ApplicationResponse-2.1.xsd";
+                    filePath = Environment.GetEnvironmentVariable("applicationResponseXsdFilePath");
                     break;
                 case DocumentType.ReceiptAdvice:
-                    filePath = @"C:\\BitirmeÖdevi\\SchemaValidation\\packges\\xsdrt\\maindoc\\UBL-ReceiptAdvice-2.1.xsd";
+                    filePath = Environment.GetEnvironmentVariable("receiptAdviceFilePath");
                     break;
             }
 
@@ -27,22 +27,9 @@ namespace C_BitirmeOdevi.ValidationBase
         }
 
 
-        public static string GetXsltFilePathByDocumentType(DocumentType documentType)
+        public static string GetXsltFilePathByDocumentType()
         {
-            string filePath = null;
-            switch (documentType)
-            {
-                case DocumentType.Invoice:
-                case DocumentType.DespatchAdvice:
-                case DocumentType.ApplicationResponse:
-                case DocumentType.ReceiptAdvice:
-                    filePath = "C:\\BitirmeÖdevi\\SchemaValidation\\packges\\schematron\\UBL-TR_Main_Schematron.xslt";
-                    break;
-                default:
-                    break;
-            }
-
-            return filePath;
+            return Environment.GetEnvironmentVariable("xsltFilePath");
         }
     }
 }

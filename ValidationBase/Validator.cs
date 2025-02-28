@@ -1,6 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Text;
-using System.Xml.Linq;
+﻿using System.Text;
 using System.Xml.Xsl;
 using System.Xml;
 
@@ -12,21 +10,22 @@ namespace C_BitirmeOdevi.ValidationBase
         public KeyValuePair<bool, List<string>> SchemaControl(string XmlString, DocumentType documentType)
         {
             string xsdPath = Function.GetXsdFilePathByDocumentType(documentType);
-
             bool hasErrors = false;
-            string commonBasicComponent = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-CommonBasicComponents-2.1.xsd";
-            string commonExtensionComponent = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-CommonExtensionComponents-2.1.xsd";
-            string commonAggregateComponent = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-CommonAggregateComponents-2.1.xsd";
-            string uqdt = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-UnqualifiedDataTypes-2.1.xsd";
-            string qd = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-QualifiedDataTypes-2.1.xsd";
-            string extensionContentDataType = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-ExtensionContentDataType-2.1.xsd";
-            string commonSignatureComponent = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-CommonSignatureComponents-2.1.xsd";
-            string CCTS_CCT = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\CCTS_CCT_SchemaModule-2.1.xsd";
-            string signatureAggregateComponents = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-SignatureAggregateComponents-2.1.xsd";
-            string XAdesV141 = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-XAdESv141-2.1.xsd";
-            string signatureBasicComponents = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-SignatureBasicComponents-2.1.xsd";
-            string xmldsig = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-xmldsig-core-schema-2.1.xsd";
-            string XAdESv132 = "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-XAdESv132-2.1.xsd";
+            string commonBasicComponent = Environment.GetEnvironmentVariable("commonBasicComponentFilePath");
+            string commonExtensionComponent = Environment.GetEnvironmentVariable("commonExtensionComponentFilePath");
+            string commonAggregateComponent = Environment.GetEnvironmentVariable("commonAggregateComponentFilePath"); ;
+            string uqdt = Environment.GetEnvironmentVariable("uqdtFilePath");
+            string qd = Environment.GetEnvironmentVariable("qdFilePath");
+            string extensionContentDataType = Environment.GetEnvironmentVariable("extensionContentDataTypeFilePath");
+            string commonSignatureComponent = Environment.GetEnvironmentVariable("commonSignatureComponentFilePath");
+            string CCTS_CCT = Environment.GetEnvironmentVariable("CCTS_CCT_FilePath");
+            string signatureAggregateComponents = Environment.GetEnvironmentVariable("signatureAggregateComponentsFilePath");
+            string XAdesV141 = Environment.GetEnvironmentVariable("XAdesV141FilePath");
+            string signatureBasicComponents = Environment.GetEnvironmentVariable("signatureBasicComponentsFilePath");
+            string xmldsig = Environment.GetEnvironmentVariable("xmldsigFilePath");
+            string XAdESv132 = Environment.GetEnvironmentVariable("XAdESv132FilePath");
+
+            bool status = File.Exists(commonExtensionComponent);
 
             XmlReaderSettings settings = new XmlReaderSettings()
             {
@@ -86,8 +85,8 @@ namespace C_BitirmeOdevi.ValidationBase
 
         public KeyValuePair<bool, string> SchematronControl(string xmlString)
         {
-            string xsltFilePath = "C:\\C#BitirmeOdevi\\packges\\schematron\\BasicSchematron.xslt";
-            string outputFilePath = "C:\\C#BitirmeOdevi\\packges\\schematron\\output.html";
+            string xsltFilePath = Function.GetXsltFilePathByDocumentType();
+            string outputFilePath = Environment.GetEnvironmentVariable("outputFilePath");
 
             // XSLT dönüşümünü başlat
             XslCompiledTransform xslt = new XslCompiledTransform();

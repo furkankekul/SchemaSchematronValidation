@@ -24,7 +24,9 @@ namespace C_BitirmeOdevi.Controllers
             {
                 case Validation.Schema:
                     schemaResponse = validator.SchemaControl(xmlString, documentType);
-                    break;
+                    if (schemaResponse.Key)
+                        return Ok(schemaResponse.Value);
+                    return BadRequest(schemaResponse.Value);
                 case Validation.Schematron:
                     schematronResponse = validator.SchematronControl(xmlString);
                     if (schematronResponse.Key)
@@ -32,15 +34,17 @@ namespace C_BitirmeOdevi.Controllers
                     return BadRequest(schematronResponse);
                 case Validation.All:
                     schemaResponse = validator.SchemaControl(xmlString, documentType);
+                    if (!schemaResponse.Key)
+                        return BadRequest(schemaResponse.Value);
                     schematronResponse = validator.SchematronControl(xmlString);
-                    if (schemaResponse.Key && schematronResponse.Key)
-                        return Ok(true);
+                    if (schematronResponse.Key)
+                        return Ok(schematronResponse.Value);
                     return BadRequest(false);
                 default:
                     break;
             }
 
-            return BadRequest();
+            return BadRequest("Validasyon türünü doğru giriniz.");
 
         }
     }
