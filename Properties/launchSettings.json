@@ -4,25 +4,25 @@
       "commandName": "Project",
       "applicationUrl": "http://localhost:5275",
       "environmentVariables": {
-        "Common_Basic_Component_File_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-CommonBasicComponents-2.1.xsd",
+        "Common_Basic_Component_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-CommonBasicComponents-2.1.xsd",
         "Common_Extension_Component_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-CommonExtensionComponents-2.1.xsd",
         "Common_Aggregate_Component_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-CommonAggregateComponents-2.1.xsd",
-        "Uqdt_File_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-UnqualifiedDataTypes-2.1.xsd",
+        "Uqdt_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-UnqualifiedDataTypes-2.1.xsd",
         "Qd_File_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-QualifiedDataTypes-2.1.xsd",
         "Extension_Content_Data_Type_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-ExtensionContentDataType-2.1.xsd",
         "Common_Signature_Component_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-CommonSignatureComponents-2.1.xsd",
         "CCTS_CCT_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\CCTS_CCT_SchemaModule-2.1.xsd",
         "Signature_Aggregate_Components_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-SignatureAggregateComponents-2.1.xsd",
         "XAdesV141_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-XAdESv141-2.1.xsd",
-        "Signature_Basic_Components_sFile_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-SignatureBasicComponents-2.1.xsd",
-        "Xml_Dsig_File_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-xmldsig-core-schema-2.1.xsd",
-        "XAdES_v132_File_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-XAdESv132-2.1.xsd",
-        "Output_File_Path": "C:\\C#BitirmeOdevi\\packges\\schematron\\output.html",
-        "Invoice_Xsd_File_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\maindoc\\UBL-Invoice-2.1.xsd",
-        "Despatch_Xsd_File_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\maindoc\\UBL-DespatchAdvice-2.1.xsd",
-        "ApplicationResponse_Xsd_File_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\maindoc\\UBL-ApplicationResponse-2.1.xsd",
-        "ReceiptAdvice_File_Path": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\maindoc\\UBL-ReceiptAdvice-2.1.xsd",
-        "XsltFilePath": "C:\\C#BitirmeOdevi\\packges\\schematron\\BasicSchematron.xslt"
+        "Signature_Basic_Components_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-SignatureBasicComponents-2.1.xsd",
+        "Xml_Dsig_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-xmldsig-core-schema-2.1.xsd",
+        "XAdES_v132_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\common\\UBL-XAdESv132-2.1.xsd",
+        "Output_FilePath": "C:\\C#BitirmeOdevi\\packges\\schematron\\output.html",
+        "Invoice_Xsd_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\maindoc\\UBL-Invoice-2.1.xsd",
+        "Despatch_Xsd_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\maindoc\\UBL-DespatchAdvice-2.1.xsd",
+        "ApplicationResponse_Xsd_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\maindoc\\UBL-ApplicationResponse-2.1.xsd",
+        "ReceiptAdvice_FilePath": "C:\\C#BitirmeOdevi\\packges\\xsdrt\\maindoc\\UBL-ReceiptAdvice-2.1.xsd",
+        "Xslt_FilePath": "C:\\C#BitirmeOdevi\\packges\\schematron\\BasicSchematron.xslt"
       }
     }
   }

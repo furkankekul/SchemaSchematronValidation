@@ -1,11 +1,18 @@
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
-COPY . /source
-WORKDIR /source
-ARG TARGETARCH
-RUN --mount=type=cache,id=nuget,target=/root/.nuget/packages \
-    dotnet publish -a ${TARGETARCH/amd64/x64} --use-current-runtime --self-contained false -o /app
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS final
+# 1. Aşama: Uygulamayı Build Etme
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
-COPY --from=build /app .
-USER $APP_UID
+
+# Proje dosyalarını kopyala ve bağımlılıkları yükle
+COPY . ./
+RUN dotnet restore
+RUN dotnet publish -c Release -o /publish --no-restore
+
+# 2. Aşama: Çalışma zamanı için hafif bir imaj kullanma
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+
+# Yayınlanan çıktıyı çalışma zamanına kopyala
+COPY --from=build /publish .
+
+# Çalıştırılacak komut
 ENTRYPOINT ["dotnet", "C#BitirmeOdevi.dll"]

@@ -4,19 +4,26 @@ services:
         container_name: validationservice
         image: csharpvalidationservice:version1
         environment: 
-          - commonBasicComponentFilePath=UBL-/mnt/data/packges/CommonBasicComponents-2.1.xsd
-          - commonExtensionComponentFilePath=/mnt/data/packges/xsdrt/common/UBL-CommonExtensionComponents-2.1.xsd
-          - commonAggregateComponentFilePath=/mnt/data/packges/xsdrt/common/UBL-CommonAggregateComponents-2.1.xsd 
-          - uqdtFilePath=/mnt/data/packges/xsdrt/common/UBL-UnqualifiedDataTypes-2.1.xsd
-          - qdFilePath=/mnt/data/packges/xsdrt/common/UBL-CommonBasicComponents-2.1.xsd
-          - extensionContentDataTypeFilePath=/mnt/data/packges/xsdrt/common/UBL-ExtensionContentDataType-2.1.xsd 
-          - commonSignatureComponentFilePath=/mnt/data/packges/xsdrt/common/UBL-CommonSignatureComponents-2.1.xsd
+          - Common_Basic_Component_FilePath=/mnt/data/packges/CommonBasicComponents-2.1.xsd
+          - Common_Extension_Component_FilePath=/mnt/data/packges/xsdrt/common/UBL-CommonExtensionComponents-2.1.xsd
+          - Common_Aggregate_Component_FilePath=/mnt/data/packges/xsdrt/common/UBL-CommonAggregateComponents-2.1.xsd 
+          - Uqdt_FilePath=/mnt/data/packges/xsdrt/common/UBL-UnqualifiedDataTypes-2.1.xsd
+          - Qd_File_Path=/mnt/data/packges/xsdrt/common/UBL-CommonBasicComponents-2.1.xsd
+          - Extension_Content_Data_Type_FilePath=/mnt/data/packges/xsdrt/common/UBL-ExtensionContentDataType-2.1.xsd 
+          - Common_Signature_Component_FilePath=/mnt/data/packges/xsdrt/common/UBL-CommonSignatureComponents-2.1.xsd
           - CCTS_CCT_FilePath=/mnt/data/packges/xsdrt/common/CCTS_CCT_SchemaModule-2.1.xsd 
-          - signatureAggregateComponentsFilePath=/mnt/data/packges/xsdrt/common/UBL-SignatureAggregateComponents-2.1.xsd
-          - XAdesV141FilePath=mnt/data/packges/xsdrt/common/UBL-XAdESv141-2.1.xsd
-          - signatureBasicComponentsFilePath=mnt/data/packges/xsdrt/common/UBL-SignatureBasicComponents-2.1.xsd
-          - xmldsigFilePath=mnt/data/packges/xsdrt/common/UBL-xmldsig-core-schema-2.1.xsd 
-          - XAdESv132FilePath=mnt/data/packges/xsdrt/common/UBL-XAdESv132-2.1.xsd
+          - Signature_Aggregate_Components_FilePath=/mnt/data/packges/xsdrt/common/UBL-SignatureAggregateComponents-2.1.xsd
+          - XAdesV141_FilePath=mnt/data/packges/xsdrt/common/UBL-XAdESv141-2.1.xsd
+          - Signature_Basic_Components_FilePath=mnt/data/packges/xsdrt/common/UBL-SignatureBasicComponents-2.1.xsd
+          - Xml_Dsig_FilePath=mnt/data/packges/xsdrt/common/UBL-xmldsig-core-schema-2.1.xsd 
+          - XAdES_v132_FilePath=mnt/data/packges/xsdrt/common/UBL-XAdESv132-2.1.xsd
+          - Output_FilePath=mnt/data/packges/schematron/output.html
+          - Invoice_Xsd_FilePath= mnt/data/packges/xsdrt/maindoc/UBL-Invoice-2.1.xsd
+          - Despatch_Xsd_FilePath=mnt/data/packges/xsdrt/maindoc/UBL-DespatchAdvice-2.1.xsd
+          - ApplicationResponse_Xsd_FilePath=mnt/data/packges/xsdrt/maindoc/UBL-ApplicationResponse-2.1.xsd
+          - ReceiptAdvice_FilePath=mnt/data/packges/xsdrt/maindoc/UBL-ReceiptAdvice-2.1.xsd
+          - Xslt_FilePath"=mnt/data/packges/schematron/BasicSchematron.xslt
+          
         ports:
           - 8080:8080
         volumes: 
