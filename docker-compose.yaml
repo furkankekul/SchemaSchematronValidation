@@ -1,0 +1,23 @@
+version: '3.4'
+services: 
+    validationservice:
+        container_name: validationservice
+        image: csharpvalidationservice:version1
+        environment: 
+          - commonBasicComponentFilePath=UBL-/mnt/data/packges/CommonBasicComponents-2.1.xsd
+          - commonExtensionComponentFilePath=/mnt/data/packges/xsdrt/common/UBL-CommonExtensionComponents-2.1.xsd
+          - commonAggregateComponentFilePath=/mnt/data/packges/xsdrt/common/UBL-CommonAggregateComponents-2.1.xsd 
+          - uqdtFilePath=/mnt/data/packges/xsdrt/common/UBL-UnqualifiedDataTypes-2.1.xsd
+          - qdFilePath=/mnt/data/packges/xsdrt/common/UBL-CommonBasicComponents-2.1.xsd
+          - extensionContentDataTypeFilePath=/mnt/data/packges/xsdrt/common/UBL-ExtensionContentDataType-2.1.xsd 
+          - commonSignatureComponentFilePath=/mnt/data/packges/xsdrt/common/UBL-CommonSignatureComponents-2.1.xsd
+          - CCTS_CCT_FilePath=/mnt/data/packges/xsdrt/common/CCTS_CCT_SchemaModule-2.1.xsd 
+          - signatureAggregateComponentsFilePath=/mnt/data/packges/xsdrt/common/UBL-SignatureAggregateComponents-2.1.xsd
+          - XAdesV141FilePath=mnt/data/packges/xsdrt/common/UBL-XAdESv141-2.1.xsd
+          - signatureBasicComponentsFilePath=mnt/data/packges/xsdrt/common/UBL-SignatureBasicComponents-2.1.xsd
+          - xmldsigFilePath=mnt/data/packges/xsdrt/common/UBL-xmldsig-core-schema-2.1.xsd 
+          - XAdESv132FilePath=mnt/data/packges/xsdrt/common/UBL-XAdESv132-2.1.xsd
+        ports:
+          - 8080:8080
+        volumes: 
+          - C:/C#BitirmeOdevi/packges:/mnt/data/packges:ro
