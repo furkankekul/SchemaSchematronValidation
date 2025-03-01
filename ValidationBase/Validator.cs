@@ -11,27 +11,41 @@ namespace C_BitirmeOdevi.ValidationBase
         {
             string xsdPath = Function.GetXsdFilePathByDocumentType(documentType);
             bool hasErrors = false;
-            string commonBasicComponent = Environment.GetEnvironmentVariable("commonBasicComponentFilePath");
-            string commonExtensionComponent = Environment.GetEnvironmentVariable("commonExtensionComponentFilePath");
-            string commonAggregateComponent = Environment.GetEnvironmentVariable("commonAggregateComponentFilePath"); ;
-            string uqdt = Environment.GetEnvironmentVariable("uqdtFilePath");
-            string qd = Environment.GetEnvironmentVariable("qdFilePath");
-            string extensionContentDataType = Environment.GetEnvironmentVariable("extensionContentDataTypeFilePath");
-            string commonSignatureComponent = Environment.GetEnvironmentVariable("commonSignatureComponentFilePath");
+            string commonBasicComponent = Environment.GetEnvironmentVariable("Common_Basic_Component_FilePath");
+            string commonExtensionComponent = Environment.GetEnvironmentVariable("Common_Extension_Component_FilePath");
+            string commonAggregateComponent = Environment.GetEnvironmentVariable("Common_Aggregate_Component_FilePath"); ;
+            string uqdt = Environment.GetEnvironmentVariable("Uqdt_FilePath");
+            string qd = Environment.GetEnvironmentVariable("Qd_File_Path");
+            string extensionContentDataType = Environment.GetEnvironmentVariable("Extension_Content_Data_Type_FilePath");
+            string commonSignatureComponent = Environment.GetEnvironmentVariable("Common_Signature_Component_FilePath");
             string CCTS_CCT = Environment.GetEnvironmentVariable("CCTS_CCT_FilePath");
-            string signatureAggregateComponents = Environment.GetEnvironmentVariable("signatureAggregateComponentsFilePath");
-            string XAdesV141 = Environment.GetEnvironmentVariable("XAdesV141FilePath");
-            string signatureBasicComponents = Environment.GetEnvironmentVariable("signatureBasicComponentsFilePath");
-            string xmldsig = Environment.GetEnvironmentVariable("xmldsigFilePath");
-            string XAdESv132 = Environment.GetEnvironmentVariable("XAdESv132FilePath");
-
-            bool status = File.Exists(commonExtensionComponent);
+            string signatureAggregateComponents = Environment.GetEnvironmentVariable("Signature_Aggregate_Components_FilePath");
+            string XAdesV141 = Environment.GetEnvironmentVariable("XAdesV141_FilePath");
+            string signatureBasicComponents = Environment.GetEnvironmentVariable("Signature_Basic_Components_FilePath");
+            string xmldsig = Environment.GetEnvironmentVariable("Xml_Dsig_FilePath");
+            string XAdESv132 = Environment.GetEnvironmentVariable("XAdES_v132_FilePath");
 
             XmlReaderSettings settings = new XmlReaderSettings()
             {
                 ValidationType = ValidationType.Schema,
                 DtdProcessing = DtdProcessing.Parse
             };
+
+            Console.WriteLine(commonBasicComponent);
+            Console.WriteLine(commonExtensionComponent);
+            Console.WriteLine(commonAggregateComponent);
+            Console.WriteLine(uqdt);
+            Console.WriteLine(qd);
+            Console.WriteLine(extensionContentDataType);
+            Console.WriteLine(commonSignatureComponent);
+            Console.WriteLine(CCTS_CCT);
+            Console.WriteLine(signatureAggregateComponents);
+            Console.WriteLine(XAdesV141);
+            Console.WriteLine(signatureBasicComponents);
+            Console.WriteLine(xmldsig);
+            Console.WriteLine(XAdESv132);
+
+
 
             settings.Schemas.Add(null, xsdPath);
             settings.Schemas.Add(null, commonBasicComponent);

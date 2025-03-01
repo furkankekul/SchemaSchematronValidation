@@ -10,16 +10,16 @@ namespace C_BitirmeOdevi.ValidationBase
             switch (documentType)
             {
                 case DocumentType.Invoice:
-                    filePath = Environment.GetEnvironmentVariable("invoiceXsdFilePath");
+                    filePath = Environment.GetEnvironmentVariable("Invoice_Xsd_FilePath");
                     break;
                 case DocumentType.DespatchAdvice:
-                    filePath = Environment.GetEnvironmentVariable("despatchXsdFilePath");
+                    filePath = Environment.GetEnvironmentVariable("Despatch_Xsd_FilePath");
                     break;
                 case DocumentType.ApplicationResponse:
-                    filePath = Environment.GetEnvironmentVariable("applicationResponseXsdFilePath");
+                    filePath = Environment.GetEnvironmentVariable("ApplicationResponse_Xsd_FilePath");
                     break;
                 case DocumentType.ReceiptAdvice:
-                    filePath = Environment.GetEnvironmentVariable("receiptAdviceFilePath");
+                    filePath = Environment.GetEnvironmentVariable("ReceiptAdvice_FilePath");
                     break;
             }
 
@@ -29,7 +29,7 @@ namespace C_BitirmeOdevi.ValidationBase
 
         public static string GetXsltFilePathByDocumentType()
         {
-            return Environment.GetEnvironmentVariable("xsltFilePath");
+            return Environment.GetEnvironmentVariable("Xslt_FilePath");
         }
     }
 }
