@@ -2,7 +2,7 @@ version: '3.4'
 services: 
     validationservice:
         container_name: validationservice
-        image: csharpvalidationservice:version1
+        image: validationservice:v1
         environment: 
           - Common_Basic_Component_FilePath=/mnt/data/packges/CommonBasicComponents-2.1.xsd
           - Common_Extension_Component_FilePath=/mnt/data/packges/xsdrt/common/UBL-CommonExtensionComponents-2.1.xsd
