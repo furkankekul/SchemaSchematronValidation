@@ -13,16 +13,16 @@ services:
           - Common_Signature_Component_FilePath=/mnt/data/packges/xsdrt/common/UBL-CommonSignatureComponents-2.1.xsd
           - CCTS_CCT_FilePath=/mnt/data/packges/xsdrt/common/CCTS_CCT_SchemaModule-2.1.xsd 
           - Signature_Aggregate_Components_FilePath=/mnt/data/packges/xsdrt/common/UBL-SignatureAggregateComponents-2.1.xsd
-          - XAdesV141_FilePath=mnt/data/packges/xsdrt/common/UBL-XAdESv141-2.1.xsd
-          - Signature_Basic_Components_FilePath=mnt/data/packges/xsdrt/common/UBL-SignatureBasicComponents-2.1.xsd
-          - Xml_Dsig_FilePath=mnt/data/packges/xsdrt/common/UBL-xmldsig-core-schema-2.1.xsd 
-          - XAdES_v132_FilePath=mnt/data/packges/xsdrt/common/UBL-XAdESv132-2.1.xsd
-          - Output_FilePath=mnt/data/packges/schematron/output.html
-          - Invoice_Xsd_FilePath= mnt/data/packges/xsdrt/maindoc/UBL-Invoice-2.1.xsd
-          - Despatch_Xsd_FilePath=mnt/data/packges/xsdrt/maindoc/UBL-DespatchAdvice-2.1.xsd
-          - ApplicationResponse_Xsd_FilePath=mnt/data/packges/xsdrt/maindoc/UBL-ApplicationResponse-2.1.xsd
-          - ReceiptAdvice_FilePath=mnt/data/packges/xsdrt/maindoc/UBL-ReceiptAdvice-2.1.xsd
-          - Xslt_FilePath"=mnt/data/packges/schematron/BasicSchematron.xslt
+          - XAdesV141_FilePath=/mnt/data/packges/xsdrt/common/UBL-XAdESv141-2.1.xsd
+          - Signature_Basic_Components_FilePath=/mnt/data/packges/xsdrt/common/UBL-SignatureBasicComponents-2.1.xsd
+          - Xml_Dsig_FilePath=/mnt/data/packges/xsdrt/common/UBL-xmldsig-core-schema-2.1.xsd 
+          - XAdES_v132_FilePath=/mnt/data/packges/xsdrt/common/UBL-XAdESv132-2.1.xsd
+          - Output_FilePath=/mnt/data/packges/schematron/output.html
+          - Invoice_Xsd_FilePath=/mnt/data/packges/xsdrt/maindoc/UBL-Invoice-2.1.xsd
+          - Despatch_Xsd_FilePath=/mnt/data/packges/xsdrt/maindoc/UBL-DespatchAdvice-2.1.xsd
+          - ApplicationResponse_Xsd_FilePath=/mnt/data/packges/xsdrt/maindoc/UBL-ApplicationResponse-2.1.xsd
+          - ReceiptAdvice_FilePath=/mnt/data/packges/xsdrt/maindoc/UBL-ReceiptAdvice-2.1.xsd
+          - Xslt_FilePath"=/mnt/data/packges/schematron/BasicSchematron.xslt
           
         ports:
           - 8080:8080
