@@ -17,7 +17,7 @@ services:
           - Signature_Basic_Components_FilePath=/mnt/data/packges/xsdrt/common/UBL-SignatureBasicComponents-2.1.xsd
           - Xml_Dsig_FilePath=/mnt/data/packges/xsdrt/common/UBL-xmldsig-core-schema-2.1.xsd 
           - XAdES_v132_FilePath=/mnt/data/packges/xsdrt/common/UBL-XAdESv132-2.1.xsd
-          - Output_FilePath=/mnt/data/packges/schematron/output.html
+          - Output_FilePath=/mnt/data/outuput.html
           - Invoice_Xsd_FilePath=/mnt/data/packges/xsdrt/maindoc/UBL-Invoice-2.1.xsd
           - Despatch_Xsd_FilePath=/mnt/data/packges/xsdrt/maindoc/UBL-DespatchAdvice-2.1.xsd
           - ApplicationResponse_Xsd_FilePath=/mnt/data/packges/xsdrt/maindoc/UBL-ApplicationResponse-2.1.xsd
@@ -27,4 +27,4 @@ services:
         ports:
           - 8080:8080
         volumes: 
-          - C:/C#BitirmeOdevi/packges:/mnt/data/packges:ro
+          - C:/C#BitirmeOdevi/packges:/mnt/data/packges

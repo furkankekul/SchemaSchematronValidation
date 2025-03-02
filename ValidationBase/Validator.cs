@@ -31,20 +31,6 @@ namespace C_BitirmeOdevi.ValidationBase
                 DtdProcessing = DtdProcessing.Parse
             };
 
-            Console.WriteLine(commonBasicComponent);
-            Console.WriteLine(commonExtensionComponent);
-            Console.WriteLine(commonAggregateComponent);
-            Console.WriteLine(uqdt);
-            Console.WriteLine(qd);
-            Console.WriteLine(extensionContentDataType);
-            Console.WriteLine(commonSignatureComponent);
-            Console.WriteLine(CCTS_CCT);
-            Console.WriteLine(signatureAggregateComponents);
-            Console.WriteLine(XAdesV141);
-            Console.WriteLine(signatureBasicComponents);
-            Console.WriteLine(xmldsig);
-            Console.WriteLine(XAdESv132);
-
             settings.ValidationEventHandler += (sender, e) =>
             {
                 hasErrors = true;
