@@ -8,6 +8,3 @@ Burada xml'verilerimiz gelir idaresi başkanlığının kendi sitesinde yayınla
 
 yazılan uygulamaya containerization teknolojisi uygulanmış olup Dockerfile dosyası ve docker-compose.yaml dosyalarını yine projenin altında bulabilir ve inceleyebilirsiniz.
 yazılan uygulamaya yakında container orchestration teknolojisi (kubernetes) uygulanıp ubuntu ortamında kubernetes üzerinde yük testi yapılıp sistem davranışları için grafana kurulup metrikler analiz edilecektir.
-
-
- 
