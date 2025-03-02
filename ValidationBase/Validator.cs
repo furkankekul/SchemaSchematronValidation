@@ -31,6 +31,21 @@ namespace C_BitirmeOdevi.ValidationBase
                 DtdProcessing = DtdProcessing.Parse
             };
 
+            settings.Schemas.Add(null, xsdPath);
+            settings.Schemas.Add(null, commonBasicComponent);
+            settings.Schemas.Add(null, commonExtensionComponent);
+            settings.Schemas.Add(null, commonAggregateComponent);
+            settings.Schemas.Add(null, uqdt);
+            settings.Schemas.Add(null, qd);
+            settings.Schemas.Add(null, extensionContentDataType);
+            settings.Schemas.Add(null, commonSignatureComponent);
+            settings.Schemas.Add(null, CCTS_CCT);
+            settings.Schemas.Add(null, signatureAggregateComponents);
+            settings.Schemas.Add(null, XAdesV141);
+            settings.Schemas.Add(null, signatureBasicComponents);
+            settings.Schemas.Add(null, XAdESv132);
+            settings.Schemas.Add(null, xmldsig);
+
             settings.ValidationEventHandler += (sender, e) =>
             {
                 hasErrors = true;
@@ -44,7 +59,7 @@ namespace C_BitirmeOdevi.ValidationBase
                 using (XmlReader reader = XmlReader.Create(stringReader, settings))
                 {
                     while (reader.Read()) { }
-                }
+                } 
 
                 if (!hasErrors)
                 {
