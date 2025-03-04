@@ -1,4 +1,4 @@
-# C#BitirmeOdevi
+# SchemaSchematronValidation
 Günümüzde elektronik haberleşmelerin çoğalması ile verilerimizin güvenli bir şekilde  gönderici noktada çalışan bir uygulamadan alıcı noktada çalışan bir uygulamaya gönderirken   
 verilerimizi xml formatında iletiyorsak, bu formatta göndereceğimiz bir verinin, xml formatına özgü isimlendirilen şema ve şematron kontrolünün .Net Core 8.0 mimarisi C# Programlama dilinin System.Xml.Schema ve System.Xml.Xsl kütüphanesi kullanılarak
 bu kontrollerin nasıl yapılacağı pratikte incelenmiştir.
